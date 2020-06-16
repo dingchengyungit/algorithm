@@ -1,1 +1,3 @@
 /classic/target/classes/com/dcy/fibonacci/Fibonacci.class
+*.iml
+*.idea/*
