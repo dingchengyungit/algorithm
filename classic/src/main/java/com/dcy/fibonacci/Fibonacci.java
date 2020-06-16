@@ -8,7 +8,8 @@ package com.dcy.fibonacci;
 public class Fibonacci {
 
     public static void main(String[] args) {
-
+        System.out.println(fibFor(50));
+//        System.out.println(fibRecursion(50));
     }
 
     public static int fibRecursion(int n) {
