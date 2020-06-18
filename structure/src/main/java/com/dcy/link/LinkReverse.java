@@ -18,16 +18,20 @@ public class LinkReverse {
 
         printNode(n1);
 
-        Node nx = reverse(n1);
+        System.out.println("---------");
+//        Node nx = reverse(n1);
+//        printNode(nx);
+//        System.out.println("---------");
+//        printNode(n3);
+//        System.out.println("---------");
 
-        printNode(nx);
-
-        printNode(n4);
+        Node ny = reverseWhile(n1);
+        printNode(ny);
     }
 
     public static Node reverse(Node node) {
-        if (node == null) {
-            return null;
+        if (node == null || node.next == null) {
+            return node;
         }
 
         Node temp = node.next;
@@ -37,6 +41,22 @@ public class LinkReverse {
         node.next = null;
 
         return newNode;
+    }
+
+    public static Node reverseWhile(Node node) {
+        Node head = node;
+        Node cur = node.next;
+        head.next = null;
+
+        while (cur != null) {
+            Node temp = cur.next;
+
+            cur.next = head;
+            head = cur;
+            cur = temp;
+        }
+
+        return head;
     }
 
     public static void printNode(Node node) {
@@ -63,6 +83,37 @@ public class LinkReverse {
         public Node(int data) {
             this.date = data;
         }
+    }
+
+    public static Node v1(Node node) {
+        if (node == null || node.next == null) {
+            return node;
+        }
+
+        Node temp = node.next;
+        Node newNode = v1(temp);
+
+        temp.next = node;
+        node.next = null;
+
+        return newNode;
+    }
+
+    public static Node v2(Node node) {
+        Node head = node;
+        head.next = null;
+
+        Node cur = node.next;
+
+        while (cur != null) {
+            Node temp = cur.next;
+            cur.next = head;
+
+            head = cur;
+            cur = temp;
+        }
+
+        return head;
     }
 }
 
