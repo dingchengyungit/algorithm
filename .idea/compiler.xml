@@ -7,12 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="classic" />
-        <module name="array" />
+        <module name="structure" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="array" target="1.5" />
-      <module name="classic" target="1.5" />
+      <module name="classic" target="11" />
+      <module name="structure" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>
