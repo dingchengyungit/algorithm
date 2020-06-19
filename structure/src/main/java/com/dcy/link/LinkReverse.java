@@ -67,24 +67,6 @@ public class LinkReverse {
     }
 
 
-   static class Node {
-        public Node next;
-
-        private int date;
-
-        public int getDate() {
-            return date;
-        }
-
-        public void setDate(int date) {
-            this.date = date;
-        }
-
-        public Node(int data) {
-            this.date = data;
-        }
-    }
-
     public static Node v1(Node node) {
         if (node == null || node.next == null) {
             return node;
