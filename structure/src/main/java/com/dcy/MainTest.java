@@ -2,6 +2,7 @@ package com.dcy;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Queue;
 import java.util.TreeSet;
 
 /**
@@ -29,6 +30,8 @@ public class MainTest {
         TreeSet<String> treeSet = new TreeSet<>();
 
         treeSet.add("s");
+
+        Queue<String> queue;
 
     }
 }
