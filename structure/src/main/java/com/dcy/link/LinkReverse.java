@@ -43,9 +43,8 @@ public class LinkReverse {
         return newNode;
     }
 
-    public static Node reverseWhile(Node node) {
-        Node head = node;
-        Node cur = node.next;
+    public static Node reverseWhile(Node head) {
+        Node cur = head.next;
         head.next = null;
 
         while (cur != null) {
