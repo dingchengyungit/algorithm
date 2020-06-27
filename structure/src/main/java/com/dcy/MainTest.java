@@ -1,9 +1,9 @@
 package com.dcy;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Queue;
-import java.util.TreeSet;
+import java.util.*;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 /**
  * @author dingchengyun
@@ -32,6 +32,23 @@ public class MainTest {
         treeSet.add("s");
 
         Queue<String> queue;
+
+
+        String x = "1,2,3,4, ,5";
+        List<String> articleIds1 = Arrays.stream(x.split(","))
+                .filter(str -> !str.trim().isEmpty())
+                .collect(Collectors.toList());
+
+        List<Long> articleIds = Arrays.stream(x.split(","))
+                .filter(str -> !str.trim().isEmpty())
+                .map(str -> Long.valueOf(str))
+                .collect(Collectors.toList());
+
+        articleIds.forEach(aid -> {
+            System.out.println(aid);
+        });
+
+        AtomicInteger ai = new AtomicInteger();
 
     }
 }
