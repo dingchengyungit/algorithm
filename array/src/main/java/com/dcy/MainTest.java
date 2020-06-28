@@ -27,6 +27,8 @@ public class MainTest {
         m.put("l", "c");
         m.put("k", "c");
 
+        m.containsKey("k");
+
         TreeSet<String> treeSet = new TreeSet<>();
 
         treeSet.add("s");
