@@ -11,14 +11,24 @@ public class LinkTest {
 
     public static void main(String[] args) throws InterruptedException {
 
-        Node n1 = new Node(1);
-        Node n2 = new Node(2);
-        Node n3 = new Node(3);
-        Node n4 = new Node(4);
+        Node n11 = new Node(1);
+        Node n12 = new Node(2);
+        Node n13 = new Node(7);
+        Node n14 = new Node(10);
 
-        n1.next = n2;
-        n2.next = n3;
-        n3.next = n4;
+        n11.next = n12;
+        n12.next = n13;
+        n13.next = n14;
+
+
+        Node n21 = new Node(4);
+        Node n22 = new Node(5);
+        Node n23 = new Node(8);
+        Node n24 = new Node(11);
+
+        n21.next = n22;
+        n22.next = n23;
+        n23.next = n24;
 
         // 1
 //        System.out.println(getLength(n1));
@@ -30,10 +40,12 @@ public class LinkTest {
 
         // 3
 
-        printReverseNode(n1);
+//        printReverseNode(n1);
 
-//        long x = TimeUnit.MILLISECONDS.toNanos(2000);
-//        System.out.println(x);
+        // 4
+        Node x = merge2SortedNode(n11, n21);
+        System.out.println(x);
+
     }
 
     /**
@@ -137,17 +149,56 @@ public class LinkTest {
        }
 
        while (!stackNode.isEmpty()) {
-           Node print = stackNode.pop();
-           System.out.println(print.getDate());
+           System.out.println(stackNode.pop().getDate());
        }
     }
 
-    // 合并两个有序的单链表，合并后依然有序
-
+    /**
+     *  4 合并两个有序的单链表，合并后依然有序
+      */
     public static Node merge2SortedNode(Node n1, Node n2) {
+        if (n1 == null) {
+            return n2;
+        }
 
-//        ClassLoader
-        return null;
+        if (n2 == null) {
+            return n1;
+        }
+
+
+        Node head;
+        Node cur;
+
+        if (n1.getDate() <= n2.getDate()) {
+            head = n1;
+            cur = n1;
+            n1 = n1.next;
+        } else {
+            head = n2;
+            cur = n2;
+            n2 = n2.next;
+        }
+
+        while (n1 != null && n2 != null) {
+            if (n1.getDate() < n2.getDate()) {
+                cur.next = n1;
+                n1 = n1.next;
+                cur = cur.next;
+            } else {
+                cur.next = n2;
+                n2 = n2.next;
+                cur = cur.next;
+            }
+        }
+
+        if (n1 != null) {
+            cur.next = n1;
+        }
+        if (n2 != null) {
+            cur.next = n2;
+        }
+
+        return head;
     }
 
 }
