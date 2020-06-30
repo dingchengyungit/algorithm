@@ -10,6 +10,7 @@
         <option value="$PROJECT_DIR$/classic/pom.xml" />
         <option value="$PROJECT_DIR$/structure/pom.xml" />
         <option value="$PROJECT_DIR$/link/pom.xml" />
+        <option value="$PROJECT_DIR$/thread/pom.xml" />
       </list>
     </option>
   </component>

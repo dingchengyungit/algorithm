@@ -7,14 +7,16 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="array" />
+        <module name="thread" />
         <module name="classic" />
         <module name="link" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="array" target="8" />
-      <module name="classic" target="8" />
-      <module name="link" target="8" />
+      <module name="classic" target="1.5" />
+      <module name="link" target="1.5" />
+      <module name="thread" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
