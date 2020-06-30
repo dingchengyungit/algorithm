@@ -10,8 +10,8 @@ import java.util.Arrays;
 public class FindSingle {
 
     public static void main(String[] args) {
-        System.out.println(1 ^ 1 ^ 3 ^ 2 ^ 2 ^ 4);
-        System.out.println(7 & 1);
+        System.out.println(1 ^ 1 ^ 2 ^ 2 ^ 3 ^ 4);
+        System.out.println(5 ^ 2);
 
         int[] x = new int[]{1, 1, 2, 2, 3, 5};
 
@@ -42,14 +42,16 @@ public class FindSingle {
 
         int len = arr.length;
         int tmp = arr[0];
+
         for (int i = 1; i < len; i++) {
             tmp ^= arr[i];
         }
 
-        int index = findFirstOne(tmp);
 
         int num1 = 0;
         int num2 = 0;
+
+        int index = findFirstOne(tmp);
 
         for (int i = 0; i < len; i++) {
             if (isOne(arr[i], index)) {
