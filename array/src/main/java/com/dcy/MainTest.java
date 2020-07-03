@@ -52,5 +52,35 @@ public class MainTest {
 
         AtomicInteger ai = new AtomicInteger();
 
+        removeList();
+
+    }
+
+    public static void removeList() {
+        List<String> list = new LinkedList<>();
+        List<String> arrList = new ArrayList<>();
+
+        arrList.add("a");
+        arrList.add("b");
+        arrList.add("c");
+        arrList.add("d");
+
+        list.add("a");
+        list.add("b");
+        list.add("c");
+        list.add("d");
+
+        int x = list.size();
+        for (int i = 0; i < x; i++) {
+            list.remove(i);
+        }
+
+        int y = arrList.size();
+        for (int i = 0; i < y; i++) {
+            arrList.remove(i);
+        }
+
+        System.out.println("xx");
+
     }
 }

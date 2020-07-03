@@ -15,21 +15,21 @@ public class FindSingle {
 
         int[] x = new int[]{1, 1, 2, 2, 3, 5};
 
-        Arrays.stream(findSingleOne(x)).forEach(i -> System.out.println(i));
+        System.out.println(findSingleOne(x));
         Arrays.stream(findSingleTwo(x)).forEach(i -> System.out.println(i));
     }
 
-    public static int[] findSingleOne(int[] arr) {
-        if (arr.length <= 0) {
-            return null;
+    public static int findSingleOne(int[] nums) {
+        if (nums.length <= 0) {
+            return 0;
         }
 
         int x = 0;
-        for (int i = 0; i < arr.length; i++) {
-            x = x ^ arr[i];
+        for (int i = 0; i < nums.length; i++) {
+            x = x ^ nums[i];
         }
 
-        return new int[]{x};
+        return x;
     }
 
     public static int[] findSingleMuti(int[] arr) {

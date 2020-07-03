@@ -1,6 +1,8 @@
 package com.dcy.array;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @author dingchengyun
@@ -10,10 +12,12 @@ import java.util.Arrays;
 public class ArrayTwoAdd {
 
     public static void main(String[] args) {
-        int[] nums = new int[]{2,5,5,11};
-        int[] x = twoSum(nums, 10);
+        int[] nums = new int[]{1,2,3,4};
+        int[] x = twoSum(nums, 5);
 
+        int[] y = twoSumMap(nums, 5);
         Arrays.stream(x).forEach(i -> System.out.println(i));
+        Arrays.stream(y).forEach(i -> System.out.println(i));
     }
 
     public static int[] twoSum(int[] nums, int target) {
@@ -33,12 +37,18 @@ public class ArrayTwoAdd {
     }
 
     public static int[] twoSumMap(int[] nums, int target) {
-        if (nums == null || nums.length <= 0) {
+        if (nums == null || nums.length <= 1) {
             return null;
         }
 
-        for (int i = 0; i < nums.length; i++) {
+        Map<Integer, Integer> numMap = new HashMap<>();
 
+        for (int i = 0; i < nums.length; i++) {
+            int n = target - nums[i];
+            if (numMap.get(n) != null) {
+                return new int[]{numMap.get(n), i};
+            }
+            numMap.put(nums[i],i);
         }
         return null;
     }
