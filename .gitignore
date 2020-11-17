@@ -3,3 +3,6 @@
 *.idea/*
 /structure/target/
 /classic/target/*.*
+/array/target/
+/link/target/
+/thread/target/
