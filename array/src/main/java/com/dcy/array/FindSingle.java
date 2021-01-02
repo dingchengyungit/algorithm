@@ -10,7 +10,7 @@ import java.util.Arrays;
 public class FindSingle {
 
     public static void main(String[] args) {
-        System.out.println(1 ^ 1 ^ 2 ^ 2 ^ 3 ^ 4);
+        System.out.println(1 ^ 1 ^ 2 ^ 2 ^ 3);
         System.out.println(5 ^ 2);
 
         int[] x = new int[]{1, 1, 2, 2, 3, 5};

@@ -78,7 +78,7 @@ public class ArrayCircleQueue {
     }
 
     public static void main(String[] args) {
-        ArrayCircleQueue arrayQueue = new ArrayCircleQueue(3);
+        ArrayCircleQueue arrayQueue = new ArrayCircleQueue(4);
         char key = ' ';
         Scanner scanner = new Scanner(System.in);
         boolean loop = true;
