@@ -6,3 +6,4 @@
 /array/target/
 /link/target/
 /thread/target/
+*.class
