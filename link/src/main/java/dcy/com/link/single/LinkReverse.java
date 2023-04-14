@@ -1,4 +1,4 @@
-package dcy.com.link;
+package dcy.com.link.single;
 
 /**
  * @author dingchengyun
@@ -28,7 +28,7 @@ public class LinkReverse {
         Node ny = reverseWhile(n1);
         printNode(ny);
     }
-
+    // 单链表反转
     public static Node reverse(Node node) {
         if (node == null || node.next == null) {
             return node;

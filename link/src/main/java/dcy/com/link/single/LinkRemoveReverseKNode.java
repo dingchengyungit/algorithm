@@ -1,4 +1,4 @@
-package dcy.com.link;
+package dcy.com.link.single;
 
 /**
  * @author dingchengyun
@@ -11,9 +11,9 @@ public class LinkRemoveReverseKNode {
 
     /**
      * 删除倒数第K个节点
-     * @param head
-     * @param k
-     * @return
+     *  获取链表长度
+     *  倒数第k个的index
+     *  找到第k个节点，把k的前一个节点的next指向k节点的next
      */
     public static Node removeReverseKNode(Node head, int k) {
         if (head == null || k < 0) {

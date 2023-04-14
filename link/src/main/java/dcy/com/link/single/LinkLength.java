@@ -1,6 +1,4 @@
-package dcy.com.link;
-
-import java.util.Stack;
+package dcy.com.link.single;
 
 /**
  * @author dingchengyun

@@ -1,4 +1,4 @@
-package dcy.com.link;
+package dcy.com.link.single;
 
 import java.util.Stack;
 
@@ -33,7 +33,7 @@ public class LinkPrintReverseNode {
      * @param head
      */
     public static void pringReverseNode2(Node head) {
-        Stack<Node> stackNode = new Stack<>();
+        Stack<Node> stackNode = new Stack<Node>();
         stackNode.push(head);
         while (head != null) {
             stackNode.push(head.next);

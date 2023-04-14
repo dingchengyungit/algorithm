@@ -1,4 +1,4 @@
-package dcy.com.link;
+package dcy.com.link.single;
 
 /**
  * @author dingchengyun

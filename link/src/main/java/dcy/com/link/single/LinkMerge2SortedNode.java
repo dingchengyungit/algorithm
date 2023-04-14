@@ -1,4 +1,4 @@
-package dcy.com.link;
+package dcy.com.link.single;
 
 /**
  * @author dingchengyun
@@ -7,7 +7,30 @@ package dcy.com.link;
  */
 public class LinkMerge2SortedNode {
 
+    public static void main(String[] args) {
+        Node n1 = new Node(1);
+        Node n12 = new Node(3);
+        Node n13 = new Node(7);
+        Node n14 = new Node(9);
+        n1.next = n12;
+        n12.next = n13;
+        n13.next = n14;
 
+        Node n2 = new Node(2);
+        Node n22 = new Node(4);
+        Node n23 = new Node(5);
+        Node n24 = new Node(113);
+        n2.next = n22;
+        n22.next = n23;
+        n23.next = n24;
+
+        Node newN = merge2SortedNode(n1, n2);
+
+        while (newN != null) {
+            System.out.println(newN.getDate());
+            newN = newN.next;
+        }
+    }
 
     /**
      *  4 合并两个有序的单链表，合并后依然有序

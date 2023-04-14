@@ -10,6 +10,8 @@ import java.util.concurrent.*;
 public class TestThreadPool {
     public static void main(String[] args){
         ExecutorService es = Executors.newFixedThreadPool(5);
+//        Executors.newFixedThreadPool();
+
         Callable callable = new Callable() {
             public Object call() throws Exception {
 

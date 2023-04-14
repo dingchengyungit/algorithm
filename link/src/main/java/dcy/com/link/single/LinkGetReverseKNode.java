@@ -1,4 +1,4 @@
-package dcy.com.link;
+package dcy.com.link.single;
 
 /**
  * @author dingchengyun
@@ -7,7 +7,10 @@ package dcy.com.link;
  */
 public class LinkGetReverseKNode {
 
-
+    public static void main(String[] args) {
+        int arr[] = new int[10];
+        System.out.println(arr[2]);
+    }
     /**
      * 2. 获取倒数第k个节点
      * @param k
@@ -44,7 +47,7 @@ public class LinkGetReverseKNode {
     }
 
     /**
-     * 2. 获取倒数第k个节点
+     * 2. 获取倒数第k个节点 滑动窗口
      * @param k
      * @return
      */
