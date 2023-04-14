@@ -1,5 +1,8 @@
 package com.dcy.fibonacci;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @author dingchengyun
  * @date 2020/6/16
@@ -10,14 +13,15 @@ public class Fibonacci {
     public static void main(String[] args) {
         System.out.println(fibFor(50));
 //        System.out.println(fibRecursion(50));
+        List<String> list = new ArrayList<String>();
     }
-
+    // 斐波那契数列
     public static int fibRecursion(int n) {
         if (n <= 1) return n;
 
         return fibRecursion(n-1) + fibRecursion(n-2);
     }
-
+    // 斐波那契数列
     public static int fibFor(int n) {
         if (n <= 1) return n;
 
